@@ -35,18 +35,27 @@ Guía para el estudiante
 
 2. **Variables y tipos de datos**
    - Una variable reserva espacio en memoria para guardar datos.
-   - **Tipos primitivos más comunes:**
-     | Tipo | Ejemplo | Descripción |
-     |------|---------|-------------|
-     | `int` | `int edad = 20;` | Números enteros |
-     | `double` | `double altura = 1.75;` | Números con decimales |
-     | `boolean` | `boolean activo = true;` | Valores `true`/`false` |
-     | `char` | `char inicial = 'A';` | Un carácter |
-   
-   - **Tipos de datos no primitivos:**
-     - `String nombre = "Ana";` // cadenas de texto
-     - `Integer numero = 5;` // clases envoltorio
-     - `int[] edades = {20, 21};` // arreglos
+  - **Tipos primitivos más comunes:**
+    | Tipo | Ejemplo | Descripción |
+    |------|---------|-------------|
+    | `byte` | `byte nivel = 1;` | Entero de 8 bits |
+    | `short` | `short conteo = 1000;` | Entero de 16 bits |
+    | `int` | `int edad = 20;` | Entero de 32 bits |
+    | `long` | `long distancia = 123456789L;` | Entero de 64 bits |
+    | `float` | `float peso = 70.5f;` | Decimal de precisión simple |
+    | `double` | `double altura = 1.75;` | Decimal de doble precisión |
+    | `boolean` | `boolean activo = true;` | Valores `true`/`false` |
+    | `char` | `char inicial = 'A';` | Un carácter |
+
+  - **Tipos de datos no primitivos:**
+    | Tipo | Ejemplo | Descripción |
+    |------|---------|-------------|
+    | `String` | `String nombre = "Ana";` | Cadena de texto |
+    | `Integer` | `Integer numero = 5;` | Clase envoltorio para `int` |
+    | `Double` | `Double temperatura = 36.6;` | Clase envoltorio para `double` |
+    | `int[]` | `int[] edades = {20, 21};` | Arreglo de enteros |
+    | `ArrayList<String>` | `ArrayList<String> nombres = new ArrayList<>();` | Lista dinámica |
+    | `LocalDate` | `LocalDate hoy = LocalDate.now();` | Fecha sin zona horaria |
    
    - Declaración, asignación y casting:
 
