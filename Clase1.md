@@ -1,4 +1,6 @@
+
 # Clase 1 – Fundamentos de Java (sin POO)
+
 
 Guía para el estudiante
 
@@ -21,6 +23,7 @@ Guía para el estudiante
 1. **Estructura de un programa Java**
    - Todo programa se organiza en clases; la ejecución inicia en el método `main`.
    - El archivo debe llamarse como la clase pública: `HolaMundo.java`.
+
    - Ejemplo:
 
      ```java
@@ -73,6 +76,7 @@ Guía para el estudiante
    - Aritméticos (`+`, `-`, `*`, `/`, `%`) permiten realizar cálculos.
    - Relacionales (`>`, `<`, `==`, `!=`) y lógicos (`&&`, `||`, `!`) ayudan a tomar decisiones.
    - El operador `=` asigna valores y `++`/`--` incrementan o decrementan.
+
    - Ejemplo:
 
      ```java
