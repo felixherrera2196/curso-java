@@ -42,10 +42,12 @@ Guía para el estudiante
      | `double` | `double altura = 1.75;` | Números con decimales |
      | `boolean` | `boolean activo = true;` | Valores `true`/`false` |
      | `char` | `char inicial = 'A';` | Un carácter |
+   
    - **Tipos de datos no primitivos:**
      - `String nombre = "Ana";` // cadenas de texto
      - `Integer numero = 5;` // clases envoltorio
      - `int[] edades = {20, 21};` // arreglos
+   
    - Declaración, asignación y casting:
 
      ```java
@@ -169,9 +171,10 @@ Guía para el estudiante
      System.out.println(matriz[0][1]); // imprime 2
      ```
 
-8. **Métodos**
-   - Los métodos encapsulan instrucciones que realizan una tarea específica.
-   - **Métodos estáticos:** se definen con la palabra clave `static` y se llaman sin crear instancias.
+8. **Métodos estáticos**
+   - Definidos con la palabra clave `static`, se llaman sin crear instancias.
+   - Se componen de tipo de retorno, nombre y parámetros.
+   - Ejemplo:
      ```java
      public static int sumar(int x, int y) {
          return x + y;
