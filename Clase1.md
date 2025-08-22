@@ -1,17 +1,15 @@
-
 # Clase 1 – Fundamentos de Java (sin POO)
-
 
 Guía para el estudiante
 
 ## Objetivos
 - Comprender la estructura básica de un programa Java.
-- Declarar variables y utilizar los tipos de datos primitivos.
+- Declarar variables y utilizar los tipos de datos primitivos y no primitivos.
 - Leer datos desde el teclado y mostrar información en consola.
 - Aplicar operadores aritméticos, relacionales y lógicos.
-- Controlar el flujo de ejecución mediante condicionales y ciclos.
+- Controlar el flujo de ejecución mediante condicionales, ciclos `while`, `do-while` y `for` anidados.
 - Manipular arreglos unidimensionales y bidimensionales.
-- Definir y llamar métodos estáticos.
+- Distinguir y llamar métodos estáticos y de instancia.
 
 ## Antes de comenzar
 - **Instala el JDK** y asegúrate de que los comandos `javac` y `java` funcionen en la terminal.
@@ -23,7 +21,6 @@ Guía para el estudiante
 1. **Estructura de un programa Java**
    - Todo programa se organiza en clases; la ejecución inicia en el método `main`.
    - El archivo debe llamarse como la clase pública: `HolaMundo.java`.
-
    - Ejemplo:
 
      ```java
@@ -36,15 +33,21 @@ Guía para el estudiante
      ```
    - Para compilar utiliza `javac HolaMundo.java` y para ejecutar `java HolaMundo`.
 
-2. **Variables y tipos de datos primitivos**
+2. **Variables y tipos de datos**
    - Una variable reserva espacio en memoria para guardar datos.
-   - Tipos primitivos más comunes:
+   - **Tipos primitivos más comunes:**
      | Tipo | Ejemplo | Descripción |
      |------|---------|-------------|
      | `int` | `int edad = 20;` | Números enteros |
      | `double` | `double altura = 1.75;` | Números con decimales |
      | `boolean` | `boolean activo = true;` | Valores `true`/`false` |
      | `char` | `char inicial = 'A';` | Un carácter |
+   
+   - **Tipos de datos no primitivos:**
+     - `String nombre = "Ana";` // cadenas de texto
+     - `Integer numero = 5;` // clases envoltorio
+     - `int[] edades = {20, 21};` // arreglos
+   
    - Declaración, asignación y casting:
 
      ```java
@@ -76,7 +79,6 @@ Guía para el estudiante
    - Aritméticos (`+`, `-`, `*`, `/`, `%`) permiten realizar cálculos.
    - Relacionales (`>`, `<`, `==`, `!=`) y lógicos (`&&`, `||`, `!`) ayudan a tomar decisiones.
    - El operador `=` asigna valores y `++`/`--` incrementan o decrementan.
-
    - Ejemplo:
 
      ```java
@@ -122,11 +124,30 @@ Guía para el estudiante
          i++;
      }
      ```
+   - Ciclo `do-while`:
+
+     ```java
+     int k = 0;
+     do {
+         System.out.println(k);
+         k++;
+     } while (k < 3);
+     ```
    - Ciclo `for`:
 
      ```java
      for (int j = 0; j < 3; j++) {
          System.out.println(j);
+     }
+     ```
+   - `for` anidado:
+
+     ```java
+     for (int fila = 1; fila <= 2; fila++) {
+         for (int col = 1; col <= 3; col++) {
+             System.out.print(fila + "," + col + " ");
+         }
+         System.out.println();
      }
      ```
 
@@ -154,7 +175,6 @@ Guía para el estudiante
    - Definidos con la palabra clave `static`, se llaman sin crear instancias.
    - Se componen de tipo de retorno, nombre y parámetros.
    - Ejemplo:
-
      ```java
      public static int sumar(int x, int y) {
          return x + y;
@@ -163,6 +183,22 @@ Guía para el estudiante
      public static void main(String[] args) {
          int resultado = sumar(3, 4);
          System.out.println("Resultado: " + resultado);
+     }
+     ```
+   - **Métodos de instancia:** pertenecen a un objeto y requieren crear una instancia.
+     ```java
+     public class Persona {
+         String nombre;
+
+         public void saludar() {
+             System.out.println("Hola, soy " + nombre);
+         }
+
+         public static void main(String[] args) {
+             Persona p = new Persona();
+             p.nombre = "Ana";
+             p.saludar();
+         }
      }
      ```
 
