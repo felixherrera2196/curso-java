@@ -33,11 +33,7 @@ Guía para el estudiante
    ```
    - Para compilar utiliza `javac HolaMundo.java` y para ejecutar `java HolaMundo`.
 
-    ```mermaid
-    flowchart LR
-        Archivo["HolaMundo.java"] -->|"javac"| Bytecode["HolaMundo.class"]
-        Bytecode -->|"java"| Consola["Salida en consola"]
-    ```
+    
 
 2. **Variables y tipos de datos**
    - Una variable reserva espacio en memoria para guardar datos.
@@ -72,17 +68,7 @@ Guía para el estudiante
       final double PI = 3.1416; // constante
       ```
 
-   ```mermaid
-   flowchart LR
-       subgraph Stack
-           edad["int edad = 25"]
-           nombre["String nombre"]
-       end
-       subgraph Heap
-           cadena["\"Ana\""]
-       end
-       nombre --> cadena
-   ```
+   
 
 3. **Entrada y salida de datos**
    - Para leer texto desde el teclado se usa `Scanner`.
@@ -187,13 +173,7 @@ Guía para el estudiante
     }
     ```
 
-   ```mermaid
-   flowchart TD
-       A[Inicio] --> B{condición?}
-       B -->|Sí| C[Instrucciones]
-       C --> B
-       B -->|No| D[Fin]
-   ```
+   
 
 7. **Arreglos**
    - Almacenan múltiples valores del mismo tipo.
@@ -206,10 +186,7 @@ Guía para el estudiante
        }
        ```
 
-   ```mermaid
-   flowchart LR
-       c0["[0] = 1"] --> c1["[1] = 2"] --> c2["[2] = 3"]
-   ```
+   
    - Ejemplo bidimensional:
 
      ```java
@@ -220,15 +197,7 @@ Guía para el estudiante
        System.out.println(matriz[0][1]); // imprime 2
        ```
 
-   ```mermaid
-   flowchart TB
-       subgraph Fila0["Fila 0"]
-           a00["[0][0]=1"] --> a01["[0][1]=2"]
-       end
-       subgraph Fila1["Fila 1"]
-           a10["[1][0]=3"] --> a11["[1][1]=4"]
-       end
-   ```
+   
 
 8. **Métodos estáticos**
    - Definidos con la palabra clave `static`, se llaman sin crear instancias.
@@ -261,15 +230,7 @@ Guía para el estudiante
        }
        ```
 
-   ```mermaid
-   sequenceDiagram
-       participant Main
-       participant Utils
-       participant Persona
-       Main->>Utils: sumar(3,4)
-       Main->>Persona: new Persona()
-       Main->>Persona: saludar()
-   ```
+   
 
 ## Actividad guiada
 

@@ -36,34 +36,11 @@ permite manejar préstamos y devoluciones de forma sencilla y ordenada.
      (métodos) dentro de una misma unidad llamada objeto, lo que vuelve el
      programa más claro.
 
-   ```mermaid
-   flowchart LR
-       subgraph Estructurado
-           A[titulos[]]
-           B[autores[]]
-           C[usuarios[]]
-       end
-       subgraph POO
-           L[(Libro)]
-           U[(Usuario)]
-       end
-       A -.-> L
-       B -.-> L
-       C -.-> U
-   ```
-
 2. **Concepto de objeto y clase**
    - Una *clase* es como el plano de un coche: describe qué atributos y
      métodos tendrá.
    - Un *objeto* es el coche construido a partir del plano.
    - Cada objeto creado desde la misma clase tiene su propio estado.
-
-   ```mermaid
-   flowchart TB
-       Clase["Clase Persona"] --> o1["Objeto p1"]
-       Clase --> o2["Objeto p2"]
-       Clase --> o3["Objeto p3"]
-   ```
 
 3. **Atributos y métodos**
    - Los **atributos** son variables que guardan información del objeto (por
@@ -84,15 +61,6 @@ permite manejar préstamos y devoluciones de forma sencilla y ordenada.
   }
   ```
 
-   ```mermaid
-   classDiagram
-       class Persona {
-           +String nombre
-           +int edad
-           +void saludar()
-       }
-   ```
-
 4. **Creación de objetos en Java**
    - Para crear un objeto se usa el operador `new` seguido del nombre de la
      clase.
@@ -110,17 +78,6 @@ permite manejar préstamos y devoluciones de forma sencilla y ordenada.
            }
        }
        ```
-
-   ```mermaid
-   flowchart LR
-       subgraph Stack
-           p["Persona p"]
-       end
-       subgraph Heap
-           obj["Objeto Persona"]
-       end
-       p --> obj
-   ```
 
 5. **Encapsulación y constructores básicos**
    - La **encapsulación** consiste en ocultar los detalles internos del objeto
@@ -141,22 +98,6 @@ permite manejar préstamos y devoluciones de forma sencilla y ordenada.
    }
    ```
 
-   ```mermaid
-   classDiagram
-       class Persona {
-           -String nombre
-           -int edad
-           +Persona(String, int)
-       }
-   ```
-
-   ```mermaid
-   sequenceDiagram
-       participant Main
-       participant Persona
-       Main->>Persona: new Persona("Ana",30)
-       Persona-->>Main: objeto creado
-   ```
 
 ## Actividad guiada
 
