@@ -37,9 +37,9 @@ permite manejar préstamos y devoluciones de forma sencilla y ordenada.
      programa más claro.
 
 2. **Concepto de objeto y clase**
-   - Una *clase* es como el plano de una casa: describe qué atributos y métodos
-     tendrá.
-   - Un *objeto* es la casa construida a partir del plano.
+   - Una *clase* es como el plano de un coche: describe qué atributos y
+     métodos tendrá.
+   - Un *objeto* es el coche construido a partir del plano.
    - Cada objeto creado desde la misma clase tiene su propio estado.
 
 3. **Atributos y métodos**
@@ -115,3 +115,10 @@ Crea una clase `Coche` que:
 ## Recursos recomendados
 - [Documentación oficial de Java](https://docs.oracle.com/javase/tutorial/)
 - [Guía de Java para principiantes](https://www.w3schools.com/java/)
+
+## Actividad adicional: Pokémon
+
+Crea una clase `Pokemon` que:
+- Tenga atributos `nombre`, `tipo`, `nivel`, `ataquePrincipal` y `sonido`.
+- Incluya métodos `atacar`, `esquivar`, `huir` y `gritar` que impriman acciones en consola.
+- En `main`, crea al menos dos objetos `Pokemon` y usa sus métodos para practicar.
