@@ -30,8 +30,14 @@ Guía para el estudiante
              System.out.println("Hola Mundo");
          }
      }
-     ```
+   ```
    - Para compilar utiliza `javac HolaMundo.java` y para ejecutar `java HolaMundo`.
+
+    ```mermaid
+    flowchart LR
+        Archivo["HolaMundo.java"] -->|"javac"| Bytecode["HolaMundo.class"]
+        Bytecode -->|"java"| Consola["Salida en consola"]
+    ```
 
 2. **Variables y tipos de datos**
    - Una variable reserva espacio en memoria para guardar datos.
@@ -62,9 +68,21 @@ Guía para el estudiante
      ```java
      int edad = 25;           // declaración + asignación
      double altura = 1.75;    // número decimal
-     int redondeada = (int) altura; // casting explícito
-     final double PI = 3.1416; // constante
-     ```
+      int redondeada = (int) altura; // casting explícito
+      final double PI = 3.1416; // constante
+      ```
+
+   ```mermaid
+   flowchart LR
+       subgraph Stack
+           edad["int edad = 25"]
+           nombre["String nombre"]
+       end
+       subgraph Heap
+           cadena["\"Ana\""]
+       end
+       nombre --> cadena
+   ```
 
 3. **Entrada y salida de datos**
    - Para leer texto desde el teclado se usa `Scanner`.
@@ -109,12 +127,21 @@ Guía para el estudiante
          System.out.println("Aprobado");
      } else {
          System.out.println("Reprobado");
-     }
-     ```
-   - Sentencia `switch`:
+       }
+       ```
+    - Sentencia `switch`:
 
-     ```java
-     int dia = 1;
+    ```mermaid
+    flowchart TD
+        A[Inicio] --> B{nota >= 90?}
+        B -->|Sí| C[Excelente]
+        B -->|No| D{nota >= 60?}
+        D -->|Sí| E[Aprobado]
+        D -->|No| F[Reprobado]
+    ```
+
+    ```java
+    int dia = 1;
      switch (dia) {
          case 1: System.out.println("Lunes"); break;
          case 2: System.out.println("Martes"); break;
@@ -153,12 +180,20 @@ Guía para el estudiante
 
      ```java
      for (int fila = 1; fila <= 2; fila++) {
-         for (int col = 1; col <= 3; col++) {
-             System.out.print(fila + "," + col + " ");
-         }
-         System.out.println();
-     }
-     ```
+       for (int col = 1; col <= 3; col++) {
+           System.out.print(fila + "," + col + " ");
+       }
+       System.out.println();
+    }
+    ```
+
+   ```mermaid
+   flowchart TD
+       A[Inicio] --> B{condición?}
+       B -->|Sí| C[Instrucciones]
+       C --> B
+       B -->|No| D[Fin]
+   ```
 
 7. **Arreglos**
    - Almacenan múltiples valores del mismo tipo.
@@ -166,19 +201,34 @@ Guía para el estudiante
 
      ```java
      int[] numeros = {1, 2, 3};
-     for (int n : numeros) {
-         System.out.println(n);
-     }
-     ```
+       for (int n : numeros) {
+           System.out.println(n);
+       }
+       ```
+
+   ```mermaid
+   flowchart LR
+       c0["[0] = 1"] --> c1["[1] = 2"] --> c2["[2] = 3"]
+   ```
    - Ejemplo bidimensional:
 
      ```java
      int[][] matriz = {
          {1, 2},
          {3, 4}
-     };
-     System.out.println(matriz[0][1]); // imprime 2
-     ```
+       };
+       System.out.println(matriz[0][1]); // imprime 2
+       ```
+
+   ```mermaid
+   flowchart TB
+       subgraph Fila0["Fila 0"]
+           a00["[0][0]=1"] --> a01["[0][1]=2"]
+       end
+       subgraph Fila1["Fila 1"]
+           a10["[1][0]=3"] --> a11["[1][1]=4"]
+       end
+   ```
 
 8. **Métodos estáticos**
    - Definidos con la palabra clave `static`, se llaman sin crear instancias.
@@ -208,8 +258,18 @@ Guía para el estudiante
              p.nombre = "Ana";
              p.saludar();
          }
-     }
-     ```
+       }
+       ```
+
+   ```mermaid
+   sequenceDiagram
+       participant Main
+       participant Utils
+       participant Persona
+       Main->>Utils: sumar(3,4)
+       Main->>Persona: new Persona()
+       Main->>Persona: saludar()
+   ```
 
 ## Actividad guiada
 
