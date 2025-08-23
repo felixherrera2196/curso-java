@@ -30,7 +30,7 @@ Guía para el estudiante
              System.out.println("Hola Mundo");
          }
      }
-   ```
+      ```
    - Para compilar utiliza `javac HolaMundo.java` y para ejecutar `java HolaMundo`.
 
     
