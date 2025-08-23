@@ -170,8 +170,8 @@ Guía para el estudiante
            System.out.print(fila + "," + col + " ");
        }
        System.out.println();
-    }
-    ```
+       }
+     ```
 
    
 
