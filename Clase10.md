@@ -269,4 +269,14 @@ String entero = String.valueOf(123);
 
 ---
 
+---
+
+## Ejercicios finales integradores
+
+Pon a prueba lo aprendido resolviendo los siguientes retos. Cada uno requiere combinar varios métodos comunes de `String`:
+
+1. **Normalizador de correos**: recibe una lista de correos separados por comas, elimina espacios extra, valida que todos terminen en `@empresa.com` y devuelve un resumen indicando cuántos son válidos e inválidos. Usa `split`, `trim`/`strip`, `endsWith`, `toLowerCase` y `String.format` para presentar el resultado.
+2. **Analizador de frases**: solicita una frase y genera un informe con la cantidad de palabras, la palabra más larga, cuántas veces aparece cada vocal y si la frase es palíndroma ignorando espacios y mayúsculas/minúsculas. Combina `split`, `length`, `toLowerCase`, `replaceAll`, `contains`, `indexOf`/`lastIndexOf` y `StringBuilder.reverse()`.
+3. **Generador de identificadores**: dada una lista de nombres completos, crea un identificador único por persona con el formato `iniciales-aaaammdd` (fecha actual). Normaliza los nombres (`trim`, `toUpperCase`), extrae iniciales con `charAt`/`substring`, asegura que no se repitan agregando un sufijo numérico con `StringBuilder`, y presenta todos los resultados usando `String.join`.
+
 Con este repaso tendrás una base sólida para procesar, validar y presentar información textual en tus aplicaciones Java.
